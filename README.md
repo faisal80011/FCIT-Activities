@@ -17,5 +17,5 @@ This is a static website project designed to showcase student activities and clu
 - [ ] CSS Styling (Phase 2 - Ongoing)
 - [ ] Additional Activities Pages (Phase 2 - Ongoing)
 
-## 🚀 How to Run:
-Open `index.html` in any web browser.
+## 🌍 Languages:
+( Currently working on both English and Arabic versions to make the site better for all students )
