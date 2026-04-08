@@ -1,47 +1,70 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>أنشطة كلية الحاسبات | FCIT Activities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCIT | KAU Activities</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .en { font-style: italic; color: #666; display: block; font-size: 0.9em; }
+        header { background: #004a99; color: white; padding: 20px; text-align: center; }
+        
+        nav a { color: #ffffff !important; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 1.1em; }
+        nav a:hover { color: #ffcc00 !important; } 
+
+        .search-box { margin-top: 15px; }
+        .search-box input { padding: 8px; width: 200px; border-radius: 5px; border: none; }
+
+        /* Image (Testing...) */
+        .hero-section {
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>مرحباً بكم في موقع أنشطة FCIT</h1>
-        <span class="en">Welcome to FCIT Activities Website</span>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية | Home</a></li>
-                <li><a href="activities.html">الأنشطة | Activities</a></li>
-                <li><a href="contact.html">تواصل معنا | Contact</a></li>
-            </ul>
+         <nav>
+            <a href="index-ar.html">🌐 العربية</a>
         </nav>
+        
+        <h1>FCIT Activities Portal</h1>
+      
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">Clubs</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search here...">
+            <button>Search</button>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>عن أنشطة الكلية</h2>
-            <span class="en">About Faculty Activities</span>
-            <p>هذا الموقع مخصص لاستعراض الفعاليات والأنشطة الطلابية في كلية الحاسبات وتقنية المعلومات.</p>
-            <p class="en">This website is dedicated to showcasing student events and activities at FCIT.</p>
+        <section class="hero-section">
+            <h2>Welcome to King Abdulaziz University Events</h2>
         </section>
 
-        <section>
-            <h2>قائمة الأندية | Clubs List</h2>
-            <ul>
-                <li>نادي البرمجة | Coding Club</li>
-                <li>نادي الأمن السيبراني | Cyber Security Club</li>
-                <li>نادي الذكاء الاصطناعي | AI Club</li>
-            </ul>
+        <section style="padding: 20px;">
+            <h3>Latest Activities</h3>
+            <pExplore the latest events held at the faculty and share your creativity with us.</p>
         </section>
     </main>
 
-    <footer>
-        <p>إعداد الطلاب: Faisal Alnahdi & Mohammed Albooq</p>
-        <p class="en">Developed by: Faisal Alnahdi & Mohammed Albooq</p>
+    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>Contact us: fcit-activities@kau.edu.sa</p>
+        <hr>
+        <p>© FCIT | KAU Activities</p>
+        <p>Developed by: Faisal Alnahdi & Mohammed Albooq</p>
     </footer>
 </body>
 </html>
