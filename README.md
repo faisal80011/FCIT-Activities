@@ -8,8 +8,8 @@
 This is a static website project designed to showcase student activities and clubs within the faculty. 
 
 ## 👥 Team Members:
-*   **Faisal [لقبك]** - (Initial Setup & HTML Structure)
-*   **[اسم خويك]** - (Styling & Additional Content)
+*   **Faisal Alnahdi** - (Initial Setup & HTML Structure)
+*   **Mohammed Albooq** - (Styling & Additional Content)
 
 ## 🛠️ Project Status:
 - [x] Repository Setup
