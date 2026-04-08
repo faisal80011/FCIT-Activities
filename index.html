@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAU - FCIT Activities</title>
+    <title>FCIT Activities</title>
     <link rel="stylesheet" href="style.css">
     <style>
         header { background: #004a99; color: white; padding: 20px; text-align: center; }
@@ -30,18 +30,21 @@
 </head>
 <body>
     <header>
-         <nav>
-            <a href="index-ar.html">🌐 العربية</a>
+         
+        <nav>
+          <!--  <a href="index-ar.html">🌐 العربية</a> -->
         </nav>
-        
+         
         <h1>FCIT Activities Portal</h1>
       
         
         <nav>
             <a href="index.html">Home</a>
-            <a href="activities.html">Clubs</a>
+            <a href="activities.html">About us</a>
             <a href="login.html">Login</a>
             <a href="register.html">Register</a>
+            <a href="#footer-section">Contact Us</a> 
+
         </nav>
         <div class="search-box">
             <input type="text" placeholder="Search here...">
@@ -51,9 +54,17 @@
 
     <main>
         <section class="hero-section">
-            <h2>Welcome to King Abdulaziz University Events</h2>
+             <div class="hero-text">
+             <h2>Welcome to FCIT Activities</h2>
+             <img src="https://techportal.in/wp-content/uploads/2023/12/king-abdulaziz-university-kau-health-sciences-center-and-university-campus-project-4674.jpg" usemap="#aboutmap" alt="FCIT Logo" style="width: 150px; border: 2px solid white;">
+             </div>
         </section>
 
+        
+
+<map name="aboutmap">
+    <area shape="rect" coords="0,0,150,150" alt="About Us" href="activities.html">
+</map>
         <section style="padding: 20px;">
             <h3>Latest Activities</h3>
             <p>Explore the latest events held at the faculty and share your creativity with us.</p>
@@ -61,6 +72,7 @@
     </main>
 
     <footer style="background: #333; color: white; text-align: center; padding: 20px;">
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;"></footer>
         <p>Contact us: fcit-activities@kau.edu.sa</p>
         <hr>
         <p>© FCIT | KAU Activities</p>
