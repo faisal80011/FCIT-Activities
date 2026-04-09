@@ -14,24 +14,13 @@
         .search-box { margin-top: 15px; }
         .search-box input { padding: 8px; width: 200px; border-radius: 5px; border: none; }
 
-        /* Image (Testing...) */
-        .hero-section {
-            background-image: url('image.png');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
-        }
+  
     </style>
 </head>
 <body>
     <header>
-         <nav>
-            <a href="index.html">🌐 English</a>
+        <nav>
+         <a href="index.html">🌐 English</a>
         </nav>
         
         <h1>بوابة أنشطة كلية الحاسبات</h1>
@@ -42,6 +31,8 @@
             <a href="activities-ar.html">الأندية</a>
             <a href="login-ar.html">دخول</a>
             <a href="register-ar.html">تسجيل</a>
+            <a href="#footer-section">تواصل معنا</a> 
+
         </nav>
         <div class="search-box">
             <input type="text" placeholder="ابحث هنا...">
@@ -51,18 +42,27 @@
 
     <main>
         <section class="hero-section">
-            <h2>مرحباً بكم في فعاليات جامعة الملك عبدالعزيز</h2>
+             <div class="hero-text">
+             <h2>مرحباً بكم في فعاليات جامعة الملك عبدالعزيز</h2>
+             <img src="" usemap="#aboutmap" alt="FCIT Logo" style="width: 150px; border: 2px solid white;">
+             </div>
         </section>
 
+
+
+<map name="aboutmap">
+    <area shape="rect" coords="0,0,150,150" alt="About Us" href="activities-ar.html">
+</map>
         <section style="padding: 20px;">
             <h3>أحدث الأنشطة</h3>
             <p>استعرض آخر الفعاليات المقامة في الكلية وشاركنا إبداعك.</p>
         </section>
     </main>
 
-    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
-        <p>تواصل معنا: fcit-activities@kau.edu.sa</p>
-        <hr>
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
+     <p>تواصل معنا: fcit-activities@kau.edu.sa</p>
+    <hr>
+
         <p>© 2026 بوابة أنشطة كلية الحاسبات - KAU</p>
         <p>إعداد: فيصل النهدي & محمد البوق</p>
     </footer>
