@@ -1,11 +1,20 @@
-# 🛠️ Alpha Branch - Development Space
+# King Abdulaziz University (KAU)
+## Faculty of Computing and Information Technology (FCIT)
+### CPIS-358: Web Development - FIRST LAUNCH! 🚀
 
-This branch is used for testing new features and styling before merging into the `main` branch.
+---
 
-## 🚧 Current Tasks:
-- [x] Implement CSS Styling 
-- [x] Add Activities detailed page
-- [x] Test Responsive Layout
+## 📌 Project: FCIT Activities Website
+This is a static website project designed to showcase student activities and clubs within the faculty. 
 
-> **Note:** Do not merge to `main` unless all features are tested.
+## 👥 Team Members:
+*   **Faisal Alnahdi** - (Initial Setup & HTML Structure)
+*   **Mohammed Albooq** - (Styling & Additional Content)
 
+## 🛠️ Project Status:
+- [x] Repository Setup
+- [x] Basic HTML Layout (Phase 1)
+- [x] CSS Styling (Phase 2 )
+
+## 🌍 Languages:
+( Currently working on both English and Arabic versions to make the site better for all students )
