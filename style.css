@@ -1,5 +1,5 @@
 body {
-    background-image: url('image.png'); 
+    background-image: url('https://techportal.in/wp-content/uploads/2023/12/king-abdulaziz-university-kau-health-sciences-center-and-university-campus-project-4674.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -69,12 +69,12 @@ footer {
 
 form {
     max-width: 450px;
-    margin: 40px auto; /* يخليه في نص الصفحة */
+    margin: 40px auto; 
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: left; /* للمحاذاة الإنجليزية */
+    text-align: left; 
 }
 
 input {
@@ -83,15 +83,31 @@ input {
     margin: 10px 0 20px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* عشان الـ padding ما يخرب العرض */
+    box-sizing: border-box;
 }
 
 .register-btn {
     background-color: #004a99;
-    width: 100%; /* الزر يصير بعرض الصندوق */
+    width: 100%; 
     padding: 12px;
     color: white;
     border: none;
     border-radius: 4px;
     font-weight: bold;
 }
+/*
+.hero-section {
+    position: relative; 
+    background-image: url('https://techportal.in/wp-content/uploads/2023/12/king-abdulaziz-university-kau-health-sciences-center-and-university-campus-project-4674.jpg');
+    height: 300px;
+    background-size: cover;
+} 
+*/
+
+.hero-text {
+    position: relative;
+    z-index: 10; 
+    color: white;
+    text-align: center;
+}
+
