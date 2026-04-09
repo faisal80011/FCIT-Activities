@@ -1,8 +1,11 @@
-🛠️ Alpha Branch - Development Space
-This branch is used for testing new features and styling before merging into the main branch.
+# 🛠️ Alpha Branch - Development Space
 
-🚧 Current Tasks:
- Implement CSS Styling
- Add Activities detailed page
- Test Responsive Layout
-Note: Do not merge to main unless all features are tested.
+This branch is used for testing new features and styling before merging into the `main` branch.
+
+## 🚧 Current Tasks:
+- [x] Implement CSS Styling 
+- [x] Add Activities detailed page
+- [x] Test Responsive Layout
+
+> **Note:** Do not merge to `main` unless all features are tested.
+
