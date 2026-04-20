@@ -21,25 +21,28 @@
             <form>
                 <div style="margin-bottom: 10px;">
                     <label>Full Name:</label><br>
-                    <input type="text" placeholder="Full Name" style="width: 80%; padding: 8px;">
+                    <input type="text" id="fullname" placeholder="Full Name" style="width: 80%; padding: 8px;">
                 </div>
                 <div style="margin-bottom: 10px;">
                     <label>Student ID:</label><br>
-                    <input type="text" placeholder="Student ID" style="width: 80%; padding: 8px;">
+                    <input type="text" id="studentId" placeholder="Student ID" style="width: 80%; padding: 8px;">
                 </div>
                 <div style="margin-bottom: 10px;">
                     <label>KAU Email:</label><br>
-                    <input type="email" placeholder="KAU Email" style="width: 80%; padding: 8px;">
+                    <input type="email" id="email" placeholder="KAU Email" style="width: 80%; padding: 8px;">
                 </div>
                 <div style="margin-bottom: 10px;">
                     <label>Password</label><br>
-                    <input type="password" placeholder="Create Password" style="width: 80%; padding: 8px;">
+                    <input type="password" id="password" placeholder="Create Password" style="width: 80%; padding: 8px;">
                 </div>
                 <div style="margin-bottom: 10px;">
                  <label>Confirm Password:</label><br>
-                 <input type="password" placeholder="Confirm Password" style="width: 80%; padding: 8px;">
+                 <input type="password" id="confirmPassword" placeholder="Confirm Password" style="width: 80%; padding: 8px;">
                 </div>
-                <button type="button" style="padding: 10px 20px; background: #004a99; color: white; border: none; cursor: pointer;">Register</button>
+                <button type="button" onclick="validateRegister()" style="padding: 10px 20px; background: #004a99; color: white; border: none; cursor: pointer;">Register</button>
+
+                <p id="registerError" style="color: red; font-size: 14px;"></p>
+                
             </form>
             <p>Already have an account?<a href="login.html"> Login Here</a></p>
             <hr>
@@ -47,12 +50,52 @@
         </section>
     </main>
 
-    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
-    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;"></footer>
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
         <p>Contact us: fcit-activities@kau.edu.sa</p>
         <hr>
         <p>© FCIT | KAU Activities 2026</p>
         <p>Developed by: Faisal Alnahdi & Mohammed Albooq</p>
     </footer>
+    
+    <script>
+        function validateRegister() {
+            let fullname = document.getElementById("fullname").value;
+            let studentId = document.getElementById("studentId").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            
+            let errorMsg = document.getElementById("registerError");
+            
+            if (fullname === "" || studentId === "" || email === "" || password === "" || confirmPassword === "") {
+                errorMsg.innerHTML = "❌ Please fill in all fields!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else if (password !== confirmPassword) {
+                errorMsg.innerHTML = "❌ Passwords do not match!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else if (!email.includes("@")) {
+                errorMsg.innerHTML = "❌ Please enter a valid KAU email!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else {
+                localStorage.setItem("loggedInUser", fullname);
+                errorMsg.innerHTML = "✅ Registration successful! Redirecting...";
+                errorMsg.style.color = "green";
+                
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 1000);
+                return true;
+            }
+        }
+    </script>
 </body>
 </html>
