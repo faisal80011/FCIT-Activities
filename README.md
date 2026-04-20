@@ -3,9 +3,9 @@
 This branch is used for testing new features and styling before merging into the `main` branch.
 
 ## 🚧 Current Tasks:
-- [x] Implement CSS Styling 
-- [x] Add Activities detailed page
-- [x] Test Responsive Layout
+- [] Implement JavaScript Logic (Assignment 2 - In Progress 🏗️)
+- [] Add User Interactivity (Click events, Form handling)
+- [] Dynamic Content Rendering (Using Arrays & DOM)
 
 > **Note:** Do not merge to `main` unless all features are tested.
 
