@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://techportal.in/wp-content/uploads/2023/12/king-abdulaziz-university-kau-health-sciences-center-and-university-campus-project-4674.jpg');
+    background-image: url('FCIT Activities.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -12,8 +12,6 @@ body {
 
 
 header {
-    text-align: right; 
-    padding-right: 50px;
     background-color: rgba(0, 74, 153, 0.9);
     color: white;
     padding: 20px;
