@@ -68,26 +68,26 @@
             let errorMsg = document.getElementById("registerError");
             
             if (fullname === "" || studentId === "" || email === "" || password === "" || confirmPassword === "") {
-                errorMsg.innerHTML = "❌ Please fill in all fields!";
+                errorMsg.innerHTML = "Please fill in all fields!";
                 errorMsg.style.color = "red";
                 return false;
             }
             
             else if (password !== confirmPassword) {
-                errorMsg.innerHTML = "❌ Passwords do not match!";
+                errorMsg.innerHTML = "Passwords do not match!";
                 errorMsg.style.color = "red";
                 return false;
             }
             
             else if (!email.includes("@")) {
-                errorMsg.innerHTML = "❌ Please enter a valid KAU email!";
+                errorMsg.innerHTML = "Please enter a valid KAU email!";
                 errorMsg.style.color = "red";
                 return false;
             }
             
             else {
                 localStorage.setItem("loggedInUser", fullname);
-                errorMsg.innerHTML = "✅ Registration successful! Redirecting...";
+                errorMsg.innerHTML = "Registration successful! Redirecting...";
                 errorMsg.style.color = "green";
                 
                 setTimeout(function() {
