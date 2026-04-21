@@ -9,7 +9,7 @@ This is a static website project designed to showcase student activities and clu
 
 ## 👥 Team Members:
 *   **Faisal Alnahdi** - (Initial Setup & HTML Structure)
-*   **Mohammed Albooq** - (Styling & Additional Content)
+*   **Mohammed Albooq** - (Styling & Additional Content & Arabic Version)
 
 ## 🛠️ Project Status:
 - [x] Repository Setup
