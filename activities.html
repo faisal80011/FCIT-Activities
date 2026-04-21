@@ -52,18 +52,70 @@
             <td>01:00 PM</td>
         </tr>
     </table>
-      <hr>
-         <a href="index.html" style="color: #004a99; font-weight: bold; text-decoration: none;">← Return to Home</a>
-</section>
-    
+         <hr>
+             <h3>📊 Grade Checker</h3>
+             <label>Enter your grade (0-100):</label>
+             <input type="number" id="gradeInput" placeholder="e.g., 85">
+             <button onclick="checkGrade()">Check</button>
+             <p id="gradeResult" style="font-weight: bold; margin-top: 10px;"></p>
+             <a href="index.html" style="color: #004a99; font-weight: bold; text-decoration: none;">← Return to Home</a>
+        </section>
     </main>
-
-    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
-    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;"></footer>
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
         <p>Contact us: fcit-activities@kau.edu.sa</p>
         <hr>
         <p>© FCIT | KAU Activities 2026</p>
         <p>Developed by: Faisal Alnahdi & Mohammed Albooq</p>
     </footer>
+
+
+        <script>
+         function checkGrade() {
+         let grade = document.getElementById("gradeInput").value;
+         let result = document.getElementById("gradeResult");
+        
+             if (grade === "") {
+             result.innerHTML = "Please enter a grade!";
+                result.style.color = "red";
+             return;
+             }
+        
+             grade = parseInt(grade);
+        
+                     if (grade < 0 || grade > 100) {
+                      result.innerHTML = "Please enter a grade between 0 and 100!";
+                      result.style.color = "red";
+                        return;
+                    }
+        
+                              if (grade >= 60 && grade <= 69) {
+                         result.innerHTML = "Your grade " + grade + " is D.";
+                         result.style.color = "green";
+                           return;
+
+                            }  
+
+                              if (grade >= 70 && grade <= 79) {
+                         result.innerHTML = "Your grade " + grade + " is C";
+                         result.style.color = "green";
+                           return;
+                           
+                            } 
+
+                                if (grade >= 80 && grade <= 89) {
+                         result.innerHTML = "Your grade " + grade + " is B";
+                         result.style.color = "green";
+                           return;
+                            } 
+                                
+                                if (grade >= 90 && grade <= 100) {
+                         result.innerHTML = "Your grade " + grade + " is A";
+                         result.style.color = "green";
+                            } else {
+                          result.innerHTML = "Your grade " + grade + " is F";
+                           result.style.color = "red";
+                        }
+        }
+        </script>
 </body>
 </html>
