@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCIT Activities | Grade Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grade-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .grade-box {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #004a99;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #003366;
+        }
+        #gradeResult {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Grade Checker</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">About us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="#footer-section">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grade-container">
+            <div class="grade-box">
+                <h2>Check Your Grade</h2>
+                <label>Enter your grade (0-100):</label><br>
+                <input type="number" id="gradeInput" placeholder="e.g., 85">
+                <br>
+                <button onclick="checkGrade()">Check Grade</button>
+                <p id="gradeResult"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>Contact us: fcit-activities@kau.edu.sa</p>
+        <hr>
+        <p>© FCIT | KAU Activities 2026</p>
+        <p>Developed by: Faisal Alnahdi & Mohammed Albooq</p>
+    </footer>
+
+        <script>
+         function checkGrade() {
+         let grade = document.getElementById("gradeInput").value;
+         let result = document.getElementById("gradeResult");
+        
+             if (grade === "") {
+             result.innerHTML = "Please enter a grade!";
+                result.style.color = "red";
+             return;
+             }
+        
+             grade = parseInt(grade);
+        
+                     if (grade < 0 || grade > 100) {
+                      result.innerHTML = "Please enter a grade between 0 and 100!";
+                      result.style.color = "red";
+                        return;
+                    }
+        
+                              if (grade >= 60 && grade <= 69) {
+                         result.innerHTML = "Your grade " + grade + " is D.";
+                         result.style.color = "green";
+                           return;
+
+                            }  
+
+                              if (grade >= 70 && grade <= 79) {
+                         result.innerHTML = "Your grade " + grade + " is C";
+                         result.style.color = "green";
+                           return;
+                           
+                            } 
+
+                                if (grade >= 80 && grade <= 89) {
+                         result.innerHTML = "Your grade " + grade + " is B";
+                         result.style.color = "green";
+                           return;
+                            } 
+                                
+                                if (grade >= 90 && grade <= 100) {
+                         result.innerHTML = "Your grade " + grade + " is A";
+                         result.style.color = "green";
+                            } else {
+                          result.innerHTML = "Your grade " + grade + " is F";
+                           result.style.color = "red";
+                        }
+        }
+         </script>
+</body>
+</html>
