@@ -15,8 +15,8 @@ This is a static website project designed to showcase student activities and clu
 - [x] Repository Setup
 - [x] Basic HTML Layout (Phase 1)
 - [x] CSS Styling (Phase 2 )
-- [ ] Implement JavaScript Logic (Assignment 2 - In Progress 🏗️)
-- [ ] Add User Interactivity (Click events, Form handling)
+- [x] Implement JavaScript Logic (Assignment 2 - In Progress 🏗️)
+- [x] Add User Interactivity (Click events, Form handling)
 - [ ] Dynamic Content Rendering (Using Arrays & DOM)
 
 ## 🌍 Languages:
