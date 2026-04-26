@@ -17,7 +17,7 @@ This is a static website project designed to showcase student activities and clu
 - [x] CSS Styling (Phase 2 )
 - [x] Implement JavaScript Logic (Assignment 2 - In Progress 🏗️)
 - [x] Add User Interactivity (Click events, Form handling)
-- [ ] Dynamic Content Rendering (Using Arrays & DOM)
+- [x] Dynamic Content Rendering (Using Arrays & DOM)
 
 ## 🌍 Languages:
 ( Currently working on both English and Arabic versions to make the site better for all students )
