@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إنشاء حساب جديد | بوابة أنشطة FCIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>إنشاء حساب جديد</h1>
+        <nav>
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="activities-ar.html">نظرة عامة</a>
+            <a href="#footer-section">تواصل معنا</a> 
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <div style="direction: rtl; text-align: right;">
+                    <label>الاسم الكامل:</label><br>
+                    <input type="text" id="fullname" placeholder="Full Name" style="width: 80%; padding: 8px;">
+                </div>
+                <div style="direction: rtl; text-align: right;">
+                    <label>الرقم الجامعي:</label><br>
+                    <input type="text" id="studentId" placeholder="Student ID" style="width: 80%; padding: 8px;">
+                </div>
+                <div style="direction: rtl; text-align: right;">
+                    <label>البريد الجامعي:</label><br>
+                    <input type="email" id="email" placeholder="KAU Email" style="width: 80%; padding: 8px;">
+                </div>
+                <div style="direction: rtl; text-align: right;">
+                    <label>كلمة المرور:</label><br>
+                    <input type="password" id="password" placeholder="Create Password" style="width: 80%; padding: 8px;">
+                </div>
+                <div style="direction: rtl; text-align: right;">
+                 <label>تأكيد كلمة المرور:</label><br>
+                 <input type="password" id="confirmPassword" placeholder="Confirm Password" style="width: 80%; padding: 8px;">
+                </div>
+                <button type="button" onclick="validateRegister()" style="padding: 10px 20px; background: #004a99; color: white; border: none; cursor: pointer;">تسجيل</button>
+
+                <p id="registerError" style="color: red; font-size: 14px;"></p>
+                
+            </form>
+            <p>لديك حساب بالفعل؟ <a href="login-ar.html">سجل دخولك هنا</a></p>
+            <hr>
+            <a href="index-ar.html">← العودة للرئيسية</a>
+        </section>
+    </main>
+
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>تواصل معنا: fcit-activities@kau.edu.sa</p>
+        <hr>
+        <p>© 2026 بوابة أنشطة كلية الحاسبات - KAU</p>
+        <p>إعداد: فيصل النهدي & محمد البوق</p>
+    </footer>
+
+     <script>
+        function validateRegister() {
+            let fullname = document.getElementById("fullname").value;
+            let studentId = document.getElementById("studentId").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            
+            let errorMsg = document.getElementById("registerError");
+            
+            if (fullname === "" || studentId === "" || email === "" || password === "" || confirmPassword === "") {
+                errorMsg.innerHTML = "الرجاء تعبئة جميع الحقول!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else if (password !== confirmPassword) {
+                errorMsg.innerHTML = "كلمة المرور وتأكيدها غير متطابقين!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else if (!email.includes("@")) {
+                errorMsg.innerHTML = "الرجاء إدخال بريد إلكتروني صالح لجامعة الملك عبدالعزيز!";
+                errorMsg.style.color = "red";
+                return false;
+            }
+            
+            else {
+                localStorage.setItem("loggedInUser", fullname);
+                errorMsg.innerHTML = "تم التسجيل بنجاح! جاري التحويل...";
+                errorMsg.style.color = "green";
+                
+                setTimeout(function() {
+                    window.location.href = "index-ar.html";
+                }, 1000);
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
