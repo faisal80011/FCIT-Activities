@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCIT Activities | Grade Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grade-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .grade-box {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #004a99;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #003366;
+        }
+        #gradeResult {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>حاسبة الدرجات 📊</h1>
+        <nav>
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="activities-ar.html">الأندية</a>
+            <a href="login-ar.html">دخول</a>
+            <a href="register-ar.html">تسجيل</a>
+            <a href="#footer-section">تواصل معنا</a> 
+        </nav>
+    </header>
+
+    <main>
+        <div class="grade-container">
+            <div class="grade-box">
+                <h2>احسب درجتك</h2>
+                <label>ما بين (0-100)</label><br>
+                <input type="number" id="gradeInput" placeholder="مثال، 85">
+                <br>
+                <button onclick="checkGrade()">احسب الدرجة</button>
+                <p id="gradeResult"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-section" style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>Contact us: fcit-activities@kau.edu.sa</p>
+        <hr>
+        <p>© FCIT | KAU Activities 2026</p>
+        <p>Developed by: Faisal Alnahdi & Mohammed Albooq</p>
+    </footer>
+
+        <script>
+function checkGrade() {
+    let grade = document.getElementById("gradeInput").value;
+    let result = document.getElementById("gradeResult");
+    
+    if (grade === "") {
+        result.innerHTML = "!يرجى إدخال رقم ما بين 0 و 100";
+        result.style.color = "red";
+        return;
+    }
+    
+    grade = parseInt(grade);
+    
+    if (grade < 0 || grade > 100) {
+        result.innerHTML = "!يرجى إدخال رقم ما بين 0 و 100";
+        result.style.color = "red";
+        return;
+    }
+    
+    const minScores = [95, 90, 85, 80, 75, 70, 65, 60];
+    const grades = ["(A+)", "(A)", "(B+)", "(B)", "(C+)", "(C)", "(D+)", "(D)"];
+    const gradeNames = ["ممتاز", "ممتاز", "جيد جداً", "جيد جداً", "جيد", "جيد", "مقبول", "مقبول"];
+    
+    for (let i = 0; i < minScores.length; i++) {
+        if (grade >= minScores[i]) {
+            result.innerHTML = grades[i] + " " + grade + "  درجتك - " + gradeNames[i];
+            result.style.color = "green";
+            return;
+        }
+    }
+    
+    result.innerHTML = "(F) " + grade + "  درجتك - راسب";
+    result.style.color = "red";
+}
+         </script>
+</body>
+</html>
