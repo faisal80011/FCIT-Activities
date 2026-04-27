@@ -28,10 +28,7 @@
                        <label>Password:</label><br>
                      <input type="password" id="password" placeholder="Password" style="width: 80%; padding: 8px;" required>                    
                     </div>
-                 
-                 
-                 <p id="loginError" style="color: red; font-size: 14px;"></p>
-
+                    <p id="loginError" style="color: red; font-size: 14px;"></p>
                  <button type="button" onclick="validateLogin()" style="padding: 10px 20px; background: #004a99; color: white; border: none; cursor: pointer;">Login</button>
             </form>
             <p>Don't have account?<a href="register.html"> Sign up now</a></p>
@@ -56,18 +53,14 @@
         let errorMsg = document.getElementById("loginError");
         
         if (username === "" || password === "") {
-            // Show error message inside the page
             errorMsg.innerHTML = "Invalid username or password!";
             return false;
         } else {
-            // Save username to localStorage
             localStorage.setItem("loggedInUser", username);
-            // Redirect to home page
             window.location.href = "index.html";
             return true;
       }
      }
     </script>
-       
 </body>
 </html>
